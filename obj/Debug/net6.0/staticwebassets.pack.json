@@ -1,7 +1,7 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ChessLeague.bundle.scp.css",
+      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\ChessLeague.bundle.scp.css",
       "PackagePath": "staticwebassets\\ChessLeague.bundle.scp.css"
     },
     {
@@ -105,19 +105,19 @@
       "PackagePath": "staticwebassets\\svg\\crown-white.svg"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ChessLeague.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ChessLeague.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.ChessLeague.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ChessLeague.props",
       "PackagePath": "build\\ChessLeague.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.ChessLeague.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ChessLeague.props",
       "PackagePath": "buildMultiTargeting\\ChessLeague.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.ChessLeague.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ChessLeague.props",
       "PackagePath": "buildTransitive\\ChessLeague.props"
     }
   ],
