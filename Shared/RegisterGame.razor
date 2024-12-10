@@ -1,0 +1,177 @@
+@using System.Net.Http
+@using System.Text.Json
+@using System.Threading.Tasks
+@inject HttpClient Http
+
+
+@if (liveGame == true){
+    <div class="container" style="display:block;">
+        <div style="display: @(pickPlayerView?"":"none")">
+            @if (participants != null && participants.Length > 0)
+            {
+                <div class="row justify-content-center">
+                    
+                    <div class="col-auto">
+                    <label> Light Player
+                    <select @bind="game.Light" class="player-picker">
+                        <option value=""></option>
+                        @foreach (var player in participants)
+                        {
+                            <option value="@player.Player.Id">@player.Player.Name</option>
+                        }
+                    </select>
+                    </label>
+                    </div>
+                    <div class="col-auto">
+                    <label> Dark Player
+                    <select @bind="game.Dark" class="player-picker">
+                        <option value=""></option>
+                        @foreach (var player in participants?.Where(p => p?.Player?.Id != p1?.Id))
+                        {
+                            <option value="@player?.Player.Id">@player?.Player?.Name</option>
+                        }
+                    </select>
+                    </label>
+                    </div>
+                </div>
+
+                @* @if (game.Light != 0 && game.Light != game.Dark  && game.Dark != 0 )
+                {
+                    <div class="row justify-content-center">
+                        <p>The same player cannot be selected in both fields.</p>
+                    </div>
+                } *@
+
+                <div class="row justify-content-center">
+                    <button @onclick="togglePickPlayerView" class="btn btn-primary next-page-btn">Next Page</button>
+                    <button type="button" class="btn btn-primary next-page-btn" @onclick="modal.Close">Cancel</button>
+                </div>
+            }
+        </div>
+        <div style="display: @(pickPlayerView?"none":"")">
+            
+            <div class="container" >
+                <p>Select White or Black Box To Choose Winner.</p>
+            </div>
+            <div class="container" >
+                @if (participants != null && participants.Length > 0)
+                {
+                    <div class="row justify-content-center">
+                        <button type="submit" title="Request cannot be made, Database is none longer active."  class="Winner-btn light" @onclick="(() => CreateGame(game.Light == p1.Id ? (uint)1 : (uint)2))" >@getPlayerByID(participants, game.Light)?.Name</button>
+
+                        <button type="submit" title="Request cannot be made, Database is none longer active."  class="Winner-btn dark" @onclick="(() => CreateGame(game.Light == p2.Id ? (uint)1 : (uint)2))">@getPlayerByID(participants, game.Dark)?.Name</button>
+
+                    </div>
+                }
+
+                <div class="row justify-content-center">
+                    <textarea class="Desc-field" @bind="game.Desc" placeholder="Enter games description here" />
+                    <textarea class="Desc-field" @bind="game.PGN" placeholder="Paste PGN Here" />
+                </div>
+
+                <div class="row justify-content-center">
+
+                    <button type="submit" title="Request cannot be made, Database is none longer active." class="Create-Game-btn btn btn-primary disable" @onclick="(() => CreateGame(3))" >Draw (Database inactive)</button>
+                </div>
+
+                <div class="row justify-content-center">
+                    <input class="datetime-local" type="datetime-local" @bind="dateTimeValue">
+                    <button type="submit" title="Request cannot be made, Database is none longer active." class="Create-Game-btn btn btn-primary disable" @onclick="(() => CreateGame(4))" >Submit Scheduled Game (Database inactive)</button>
+                </div>
+
+                <div class="modal-footer justify-content-center" style="border:none;">
+                    <div class="row justify-content-center">
+                        <button @onclick="togglePickPlayerView" class="btn btn-primary prev-page-btn" style="width:200px;">Previous Page</button>
+                    </div>
+                    <label>
+                        <input type="checkbox" @bind=isExhibition />
+                        Exhibition game
+                    </label>
+                    <button type="button" class="btn btn-primary" @onclick="SwitchColors">Switch Colors</button>
+                    @* <button type="button" class="btn btn-primary" @onclick="RandomColors">Random Colors</button> *@
+                    <button type="button" class="btn btn-primary" @onclick="modal.Close">Cancel</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+}
+
+@code {
+
+    /* Game variables*/
+    [Parameter]
+    public Modal? modal { get; set; }
+    [Parameter]
+    public Season? season { get; set; }
+    [Parameter]
+    public Game? game { get; set; }
+    [Parameter]
+    public Player? p1 {get; set;}
+    [Parameter]
+    public Player? p2 {get; set;}
+    [Parameter]
+    public DateTime dateTimeValue {get; set;}
+    [Parameter]
+    public PlayerStats[]? participants {get; set;}
+
+    [Parameter]
+    public bool pickPlayerView {get; set;} = true;
+
+
+    /*  */
+    private bool liveGame = true;
+    private bool isExhibition = false;
+
+    public async Task CreateGame(uint State)
+    {
+        modal.Close();
+    }
+
+    private void SwitchColors(){
+        uint temp  = game.Light;
+        game.Light = game.Dark;
+        game.Dark  = temp;
+
+        @* Player tempPlayer  = p1;
+        p1 = p2;
+        p2 = tempPlayer; *@
+    }
+    @* private void RandomColors(){
+        Random random = new Random();
+        int duration = random.Next(3000, 5000); // Generate a random duration between 3000ms and 5000ms
+
+        DateTime startTime = DateTime.Now;
+
+        for (int i = 0; ; i++)
+        {
+            // Perform loop operations here
+
+            if ((DateTime.Now - startTime).TotalMilliseconds >= duration)
+                break;
+
+            // Optionally, you can add a delay between loop iterations
+            // to avoid high CPU usage. Adjust the value as needed.
+            Thread.Sleep(i+400);
+            SwitchColors();
+            StateHasChanged();
+        }
+    } *@
+    public void togglePickPlayerView(){
+        if (game.Light != 0 && game.Light != game.Dark  && game.Dark != 0 ){
+            pickPlayerView = pickPlayerView ? false : true;
+        }
+    }
+    private Player getPlayerByID(PlayerStats[] playerList, uint id){
+        if (playerList != null ){
+            foreach (PlayerStats ps in playerList)
+            {
+                if (ps.Player.Id == id)
+                {
+                    return ps.Player;
+                }
+            }
+        }
+        return null;
+    }
+}

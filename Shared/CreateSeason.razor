@@ -1,0 +1,60 @@
+@using System.Net.Http
+@using System.Text.Json
+@inject HttpClient Http
+
+<!-- Register a Player -->
+<form class="container" id="signUpForm">
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <label for="newSeasonName">Season Name:</label>
+        </div>
+        <div class="col-auto">
+            <input type="text" id="newSeasonName" name="newSeasonName"  @bind-value="newSeason.Name" />
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <label for="newSeasonName">Start Date:</label>
+        </div>
+        <div class="col-auto">
+            <input type="datetime-local" @bind="newSeason.StartDate">
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-auto">
+            <label for="newSeasonName">End Date:</label>
+        </div>
+        <div class="col-auto">
+            <input type="datetime-local" @bind="newSeason.EndDate">
+        </div>
+    </div>
+    
+    <div class="modal-footer justify-content-center" style="border:none; margin: 0px;">
+        <button type="submit"  title="Request cannot be made, Database is none longer active." class="btn btn-primary disable" @onclick="createSeason">Create New Season(Database inactive)</button>
+        <button type="button" class="btn btn-primary" @onclick="modal.Close">Cancel</button>
+    </div>
+</form>
+
+@code{
+
+    [Parameter]
+    public Modal modal { get; set; }
+   
+    public Season newSeason = new Season();
+
+    private async Task createSeason()
+    {
+        SeasonCreate seasonReq = new SeasonCreate();
+        seasonReq.Name = newSeason.Name;
+        seasonReq.StartDate = newSeason.StartDate.ToString("yyyy-MM-ddTHH:mm:ss") + ".000-05:00";
+        seasonReq.EndDate = newSeason.EndDate.ToString("yyyy-MM-ddTHH:mm:ss") + ".000-05:00";
+
+
+        await Request.SendPostRequest("season",JsonSerializer.Serialize(seasonReq));
+
+        modal.Close();
+        @* OnInitializedAsync(); *@
+    }
+    
+    
+}
