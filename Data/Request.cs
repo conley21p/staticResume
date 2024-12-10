@@ -71,7 +71,7 @@ public class Request
         int nextPage = 0;
         //while (true)
         //{
-            string responseContent = File.ReadAllText("c:\\Users\\conle\\Documents\\Software\\ChessLeagueDashboard\\ChessLeague\\StaticJsonResponses\\getSeasonList.json");;
+            string responseContent = File.ReadAllText("..\\StaticJsonResponses\\getSeasonList.json");;
             SeasonsResponse? response = JsonSerializer.Deserialize<SeasonsResponse>(responseContent, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
             // if (response == null)
@@ -103,7 +103,7 @@ public class Request
         // int nextPage = 0;
         // while (true)
         // {
-            string responseContent = File.ReadAllText("c:\\Users\\conle\\Documents\\Software\\ChessLeagueDashboard\\ChessLeague\\StaticJsonResponses\\getAllPlayersList.json");
+            string responseContent = File.ReadAllText("..\\StaticJsonResponses\\getAllPlayersList.json");
             allPlayersResponse? response = JsonSerializer.Deserialize<allPlayersResponse>(responseContent, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
 
             // if (response == null)
@@ -130,13 +130,13 @@ public class Request
     }
     public static async Task<Game[]> getSeasonGames(uint seasonId)
     {
-        string responseContent = File.ReadAllText("c:\\Users\\conle\\Documents\\Software\\ChessLeagueDashboard\\ChessLeague\\StaticJsonResponses\\getGames.json");
+        string responseContent = File.ReadAllText("..\\StaticJsonResponses\\getGames.json");
         return JsonSerializer.Deserialize<Game[]>(responseContent, new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
     }
 
     public static async Task<PlayerStats[]>? postParticitpants(uint seasonId)
     {
-        string responseContent = File.ReadAllText("c:\\Users\\conle\\Documents\\Software\\ChessLeagueDashboard\\ChessLeague\\StaticJsonResponses\\getParticipants.json");
+        string responseContent = File.ReadAllText("..\\StaticJsonResponses\\getParticipants.json");
         return JsonSerializer.Deserialize<PlayerStats[]>(responseContent,
                                                             new JsonSerializerOptions { PropertyNameCaseInsensitive = true });
     }

@@ -7,6 +7,7 @@
 @inject HttpClient Http
 @inject IJSRuntime JSRuntime
 @inject NavigationManager NavigationManager
+@using staticResume.Shared
 
 
 <div class="ChessBody">
@@ -172,21 +173,21 @@
 </div>
 
 <!-- Register a Player -->
-<Modal @ref="modalPlayer" ModalTitle="Register a Player" OnOkCacncelClick="refreshPage">
-    <RegisterPlayer modal="@modalPlayer">
-    </RegisterPlayer>
-</Modal>
+<staticResume.Shared.Modal @ref="modalPlayer" ModalTitle="Register a Player" OnOkCacncelClick="refreshPage">
+    <staticResume.Shared.RegisterPlayer modal="@modalPlayer">
+    </staticResume.Shared.RegisterPlayer>
+</staticResume.Shared.Modal>
 <!-- Game a Player -->
-<Modal @ref="modalGame" ModalTitle="Register Game" OnOkCacncelClick="refreshGameObject">
-    <RegisterGame modal="@modalGame" game="@game" p1="@p1" p2="@p2" participants="@players" dateTimeValue="@DateTime.Parse(game.TimePlayed)" season="selectedSeason" pickPlayerView="true">
-    </RegisterGame>
-</Modal>
+<staticResume.Shared.Modal @ref="modalGame" ModalTitle="Register Game" OnOkCacncelClick="refreshGameObject">
+    <staticResume.Shared.RegisterGame modal="@modalGame" game="@game" p1="@p1" p2="@p2" participants="@players" dateTimeValue="@DateTime.Parse(game.TimePlayed)" season="selectedSeason" pickPlayerView="true">
+    </staticResume.Shared.RegisterGame>
+</staticResume.Shared.Modal>
 
 <!-- Game a Player -->
-<Modal @ref="modalCreateSeason" ModalTitle="Create Season" OnOkCacncelClick="refreshPage">
-    <CreateSeason modal="@modalCreateSeason" >
-    </CreateSeason>
-</Modal>
+<staticResume.Shared.Modal @ref="modalCreateSeason" ModalTitle="Create Season" OnOkCacncelClick="refreshPage">
+    <staticResume.Shared.CreateSeason modal="@modalCreateSeason" >
+    </staticResume.Shared.CreateSeason>
+</staticResume.Shared.Modal>
 
 <!-- Live Game -->
 
@@ -210,9 +211,9 @@
     private string errorMessage = string.Empty;
     private bool advancedView   = false;
     /* Sign Up Variables*/
-    private Modal modalPlayer = new Modal();
-    public Modal modalGame = new Modal();
-    private Modal modalCreateSeason = new Modal();
+    private staticResume.Shared.Modal modalPlayer = new Modal();
+    public staticResume.Shared.Modal modalGame = new Modal();
+    private staticResume.Shared.Modal modalCreateSeason = new Modal();
 
     // List of all players, for add player to season list
     private List<Player> allPlayers = null;

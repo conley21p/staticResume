@@ -193,7 +193,7 @@ a, .btn-link {
     }
     .resume-highlights-wrapper .dash-img
     {
-        background-image: url(https://private-user-images.githubusercontent.com/71302026/243239976-ec501d1e-d9e9-49bf-a8ec-4b1c6d0dc778.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzM1NDQyNjMsIm5iZiI6MTczMzU0Mzk2MywicGF0aCI6Ii83MTMwMjAyNi8yNDMyMzk5NzYtZWM1MDFkMWUtZDllOS00OWJmLWE4ZWMtNGIxYzZkMGRjNzc4LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMDclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjA3VDAzNTkyM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTU4YzBjNGRkZmI1N2M4ZTRhOGUwYjNiMzYyZDViZWNmODZjZDQ5NzUxMWI2YzVjMTQyYzBmZjU0MmRmYjQ2YjcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.Tveyat5T0otPiqT3uxi9isILT0lc5Pw7ZkkIPHTif0I);
+        background-image: url(https://avatars.githubusercontent.com/u/71302026?v=4);
         position:fixed;
         right:19%;
         width:357px;
@@ -383,3 +383,7 @@ a, .btn-link {
     {
         background: transparent;
     }
+
+.loading-progress {
+    height:100vh;
+}

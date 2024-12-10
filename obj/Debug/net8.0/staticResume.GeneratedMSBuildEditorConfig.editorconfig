@@ -1,0 +1,75 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = staticResume
+build_property.RootNamespace = staticResume
+build_property.ProjectDir = C:\Users\conle\Documents\Software\staticResume\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\conle\Documents\Software\staticResume
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/conle/Documents/Software/staticResume/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/conle/Documents/Software/staticResume/Pages/ChessDash.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hlc3NEYXNoLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/conle/Documents/Software/staticResume/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSG9tZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/conle/Documents/Software/staticResume/Shared/CreateSeason.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXENyZWF0ZVNlYXNvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/conle/Documents/Software/staticResume/Shared/Modal.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1vZGFsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/conle/Documents/Software/staticResume/Shared/RegisterGame.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFJlZ2lzdGVyR2FtZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/conle/Documents/Software/staticResume/Shared/RegisterPlayer.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFJlZ2lzdGVyUGxheWVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/conle/Documents/Software/staticResume/Shared/SurveyPrompt.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXFN1cnZleVByb21wdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/conle/Documents/Software/staticResume/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/conle/Documents/Software/staticResume/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-g9j378c6w3
+
+[C:/Users/conle/Documents/Software/staticResume/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-jxkb4qq526
+
+[C:/Users/conle/Documents/Software/staticResume/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-k4bh7bs4zo
+
+[C:/Users/conle/Documents/Software/staticResume/Shared/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE5hdk1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-2crn69e2mh

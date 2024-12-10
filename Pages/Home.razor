@@ -1,0 +1,211 @@
+﻿@page "/"
+@using System.Net.Http
+@using System.Text.Json
+@using System.Threading.Tasks
+@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.JSInterop;
+@inject HttpClient Http
+@inject IJSRuntime JSRuntime
+@inject NavigationManager NavigationManager
+
+
+<div>
+    <div class="row">
+        <div class="col">
+            <div class="resume-header-wrapper">
+                
+                <div class="row">
+                    <div class="col name-col resume-header-name">
+                        Conley Price
+                    </div>
+                    <div class="col col-auto resume-contacts">
+                        <button @onclick="NavigateToGithub" class="ext-link">
+                            <img src="../svg/github.svg" style="display:block;pointer-events: none;width:31px;">
+                        </button>
+                    </div>
+                    
+                    <div class="col col-auto resume-contacts">
+                        <button @onclick="NavigateToLL" class="ext-link">
+                            <img src="../svg/LinkedIn.svg" style="display:block;pointer-events: none;width:40px;">
+                        </button>
+                    </div>
+                    <div class="col col-auto resume-contacts">
+                        CJP6810@Gmail.com
+                    </div>
+                    <div class="col col-auto resume-contacts">
+                        217-503-0407
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col no-background">
+            <div class="resume-highlights-wrapper">
+                <div class="row">
+                    <div class="col col-list">
+                        <h1>
+                            Ambitious Hard Worker
+                        </h1>
+                        <li class="list-item">
+                            Looking to join a company where I can grow with them!
+                        </li>
+                        <li class="list-item">
+                            Leading mentorship program with 16 active pairings.
+                        </li>
+                        <li class="list-item">
+                            Work with clients to develop the best solutions.
+
+                        </li>
+                        <li class="list-item">
+                            Experience assisting system users in the testing phase of the project.
+                        </li>
+                        <li class="list-item">
+                            Experience Delivering Proof of Concepts, Demos and tutorials to clients.
+                        </li>
+                        <li class="list-item">
+                            Strong technical and communications skills
+                        </li>
+                        <li class="list-item">
+                            Experience Developing Tax Management Software.
+                        </li>
+                        <li class="list-item">
+                            Leading complex development items in financial sub system upgrade for IDOR statewide tax management software.
+                        </li>
+                    </div>
+                    <div class="col col-auto">
+                        <div class="dash-img" @onclick="NavigateToLL">
+                            <button class="view-dash" @onclick="NavigateToLL">View LinkedIn</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="row">
+        <div class="col">
+            <div class="resume-body-wrapper">
+                
+                <div class="row">
+                    <div class="col name-col">
+                        <h3>Software Engineer Consultant - Fast Enterprise</h3>
+                        <h6 style="font-style:italic;">October 2023 - Current</h6>
+                        <p>
+                            Successfully Rolled out a financial sub system upgrade for Illinois Department of Revenue's statewide tax management software. The project's development included implementing financial  processes like tracking revenue accounting, directing, reallocating payments in the system along with many other processes like collections.</p><p>As a Software Engineer Consultant, I've gained valuable experience in building trusted client relationships and delivering successful projects.
+                        </p>
+                        <p>
+                            My experience includes:
+                        </p>
+                        <li class="list-item">
+                            As a Software Engineer Consultant, we work through three phases in a project. The definition phase is delivering presentations and establishing definition items with a client. The development phase is implementing the solutions and notifying the client of any unexpected scenarios, confirming the best solution is implemented. The testing phase is continued support for the client whether it is presenting tutorials on the new processes or addressing questions and concerns.
+                        </li>
+                        <li class="list-item">
+                            As a consultant I have provided successful proof of concept presentations to the client. These presentations cover the solutions to the current systems pain points and demo proposed solutions.
+                        </li>
+                        <li class="list-item">
+                            I was selected to lead the creation and implementation of the mentorship program for our team of 32 engineers at the Illinois client site. In building this program I defined program goals, paired mentors and mentees, and developed a curriculum that focuses on consulting and development skills. As the program lead, I have worked with the team leads and Project Manager to create pairings and establish areas of growth we'd like to see from the individuals in the mentorships. This has quickly become a passion project of mine.
+                        </li>
+                        <li class="list-item">
+                            I have taken ownership of complex development tasks, becoming a go-to resource for my team. An early goal of mine was to become not only a go-to person, but a go-to person people trust and want to work with. I've had great mentors along the way show me what this looks like.
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <div class="resume-body-wrapper">
+                
+                <div class="row">
+                    <div class="col name-col">
+                        <h3>Full Stack Developer - Levi, Ray & Shoup</h3>
+                        <h6 style="font-style:italic;">May 2022 - October 2023</h6>
+                        <h3>Intern Full Stack Developer - Levi, Ray & Shoup</h3>
+                        <h6 style="font-style:italic;">May 2021 - August 2021</h6>
+                        <p>
+                            Developing in a low level language furthered my foundational software development knowledge. Additionally I worked in high level languages like python and C#. I developed an in-house development tool called Langer. Langer was a Decode manager for the LRS suite of products. Langer allowed initialization of new languages and allowed users to edit decodes for existing supported languages.
+                        </p>
+                        <li class="list-item">
+                            Back-end: Workflow consisted of application written in C and C#. Tasks include enhancements to networking for distributed systems, REST API, implementation for new character sets, etc.
+                        </li>
+                        <li class="list-item">
+                            Front end: Developed in a variety of front end stacks like JavaScript (jQuery framework) and C# (Razor and Blazer components).
+                        </li>
+                        <li class="list-item">
+                            Github was used for version control. Additionally, I used Github workflows for a robust and streamlined process for getting products to production.
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+            <div class="resume-body-wrapper">
+                
+                <div class="row">
+                    <div class="col name-col">
+                        <h3>Illinois State University - Computer Science Graduate</h3>
+                        <h6 style="font-style:italic;">
+                            August 2019 - August 2022
+                        </h6>
+                        <li class="list-item">
+                            3.88 GPA
+                        </li>
+                        <li class="list-item">
+                            Awarded Illinois State University Distinguished Sophomore For 2020-2021
+                        </li>
+                        <li class="list-item">
+                            Member of the Artificial Intelligence and Web development club
+                        </li>
+                        <li class="list-item">
+                            Graduated with four year degree within three years
+                        </li>
+                        <li class="list-item">
+                            Played on ISU club lacrosse team
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col">
+            <div class="resume-more-wrapper">
+                
+                <div class="row">
+                    <div class="col name-col">
+                        <li style="list-style-type: none;">
+                            I am a passionate learner. In my free time I have worked on many personal projects from building and writing flight controller software for a quadcopter to creating an app and website to track our after-work chess league. I grew up spending countless hours playing competitive team sports. I thrive in competitive environments and am not afraid of a challenge! I guarantee to bring energy and enthusiasm everyday! I am very excited to discuss how I would contribute to your team!
+                        </li>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@code {
+    private void NavigateToDashboard()
+    {
+        NavigationManager.NavigateTo("/ChessDash");
+    } 
+    private void NavigateToGithub()
+    {
+        NavigationManager.NavigateTo("https://github.com/conley21p");
+    }
+
+    private void NavigateToLL()
+    {
+        NavigationManager.NavigateTo("https://www.linkedin.com/in/conleyprice/", false, false);
+    }
+
+}
