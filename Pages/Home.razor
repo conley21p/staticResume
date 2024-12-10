@@ -18,11 +18,11 @@
                     <div class="col name-col resume-header-name">
                         Conley Price
                     </div>
-                    <div class="col col-auto resume-contacts">
+                    @* <div class="col col-auto resume-contacts">
                         <button @onclick="NavigateToGithub" class="ext-link">
                             <img src="../svg/github.svg" style="display:block;pointer-events: none;width:31px;">
                         </button>
-                    </div>
+                    </div> *@
                     
                     <div class="col col-auto resume-contacts">
                         <button @onclick="NavigateToLL" class="ext-link">
@@ -74,9 +74,9 @@
                             Leading complex development items in financial sub system upgrade for IDOR statewide tax management software.
                         </li>
                     </div>
-                    <div class="col col-auto">
-                        <div class="dash-img" @onclick="NavigateToLL">
-                            <button class="view-dash" @onclick="NavigateToLL">View LinkedIn</button>
+                    <div class="col col-auto" style="width:0px">
+                        <div class="dash-img" @onclick="NavigateToGithub">
+                            <button title="View Github" class="view-dash" @onclick="NavigateToGithub">View Github</button>
                         </div>
                     </div>
                 </div>
