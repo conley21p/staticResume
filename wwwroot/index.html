@@ -4,22 +4,24 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>staticResume</title>
+    <title>Conley Price - Software Engineer at Anduril</title>
     <base href="/" />
     <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/site.css" />
-    <link rel="icon" type="image/png" href="favicon.png" />
-    <link href="staticResume.styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/resume.css" />
+    <link rel="icon" type="image/x-icon" href="https://anduril.com/favicon.ico" />
+    <link href="AndurilResume.styles.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 
 <body>
     <div id="app">
-        <div  style="height:100vh">
-            <div class="loading-progress-text" style="display: flex; align-items: center; justify-content: center;">
-                <h1 style="">Conley Price Resume Loading</h1>
-                <span class="loader" style="position:relative; top:50px;"></span>
-            </div>
-        </div>
+        <svg class="loading-progress">
+            <circle r="40%" cx="50%" cy="50%" />
+            <circle r="40%" cx="50%" cy="50%" />
+        </svg>
+        <div class="loading-progress-text"></div>
     </div>
 
     <div id="blazor-error-ui">
@@ -28,6 +30,65 @@
         <a class="dismiss">🗙</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script>
+        window.prepareForExport = function () {
+            const exportButtons = document.querySelector('.export-buttons');
+            if (exportButtons) {
+                exportButtons.style.display = 'none';
+            }
+        };
+
+        window.resetAfterExport = function () {
+            const exportButtons = document.querySelector('.export-buttons');
+            if (exportButtons) {
+                exportButtons.style.display = 'flex';
+            }
+        };
+
+        window.exportToPdf = async function () {
+            const content = document.querySelector('#resume-content') || document.querySelector('#cover-letter-content');
+            if (!content) return;
+
+            const isCoverLetter = content.id === 'cover-letter-content';
+            const fileName = isCoverLetter ? 'Conley_Price_Cover_Letter.pdf' : 'Conley_Price_Resume.pdf';
+
+            // Create canvas with higher resolution
+            const canvas = await html2canvas(content, {
+                scale: 2, // Increase resolution
+                useCORS: true,
+                logging: false
+            });
+
+            const imgWidth = canvas.width;
+            const imgHeight = canvas.height;
+
+            // Create PDF with exact dimensions of the content
+            const pdf = new jspdf.jsPDF({
+                orientation: imgWidth > imgHeight ? 'landscape' : 'portrait',
+                unit: 'px',
+                format: [imgWidth, imgHeight],
+                hotfixes: ['px_scaling']
+            });
+
+            // Add image to fill the entire PDF page
+            pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, imgWidth, imgHeight);
+            pdf.save(fileName);
+        };
+
+        window.downloadScreenshot = async function () {
+            const content = document.querySelector('#resume-content') || document.querySelector('#cover-letter-content');
+            if (!content) return;
+
+            const isCoverLetter = content.id === 'cover-letter-content';
+            const fileName = isCoverLetter ? 'Conley_Price_Cover_Letter.png' : 'Conley_Price_Resume.png';
+
+            const canvas = await html2canvas(content);
+            const link = document.createElement('a');
+            link.download = fileName;
+            link.href = canvas.toDataURL();
+            link.click();
+        };
+    </script>
 </body>
 
 </html>

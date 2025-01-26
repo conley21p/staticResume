@@ -1,0 +1,77 @@
+@page "/coverletter"
+@inject IJSRuntime JSRuntime
+
+<div class="resume-container" id="cover-letter-content">
+    <div class="export-buttons">
+        <button class="btn btn-dark mx-2" @onclick="ExportToPdf">Export PDF</button>
+        <button class="btn btn-dark mx-2" @onclick="DownloadScreenshot">Save Image</button>
+    </div>
+
+    <header class="text-center cover-letter-header">
+        <h1 class="display-4 mb-3">CONLEY PRICE</h1>
+        <div class="position-info mb-2">Software Engineer Consultant at Fast Enterprise</div>
+        <div class="contact-info @(_hideReturnLink ? "exporting" : "")">
+            <a href="mailto:CJP6810@gmail.com" class="mx-2">CJP6810@gmail.com</a>
+            <a href="/" class="mx-2 return-link @(_hideReturnLink ? "hidden" : "")">RETURN TO RESUME</a>
+        </div>
+    </header>
+
+    <section class="cover-letter-body">
+        <div class="date text-right mb-4">
+            @DateTime.Now.ToString("MMMM dd, yyyy")
+        </div>
+
+        <div class="mb-4">
+            <p>Dear Anduril Industries Hiring Team,</p>
+        </div>
+
+        <div class="letter-content">
+            <p class="mb-4">
+                I am writing to express my strong interest in the Software Engineer, Battlespace Awareness position at Anduril Industries. Your mission to transform defense capabilities through cutting-edge technology deeply resonates with my passion for innovative engineering and desire to make a meaningful impact.
+            </p>
+
+            <p class="mb-4">
+                Throughout my career, I've demonstrated a commitment to pushing technological boundaries and solving complex challenges. My experience developing flight controller software for a custom-built quadcopter and conducting independent research in Neural Network design aligns perfectly with Anduril's focus on autonomous systems and AI-powered solutions. The prospect of contributing to Lattice OS and working on systems that integrate AI, computer vision, and sensor fusion is particularly exciting to me.
+            </p>
+
+            <p class="mb-4">
+                My background in both low-level systems programming (C) and high-level application development (Python, Javascript, C# & Golang) has given me a comprehensive understanding of the full technology stack. During my full stack developement role, I gained valuable experience in distributed systems and algorithm optimization, skills that would be directly applicable to developing high-performance tactical systems at Anduril. Additionally, my recent task of starting and leading a mentorship program for 32 engineers demonstrates my ability to collaborate effectively and contribute to team success.
+            </p>
+
+            <p class="mb-4">
+                The idea of contributing to technology that directly supports autonomous defense capabilities and battlefield awareness is incredibly motivating. As a competitive and driven individual, I'm drawn to Anduril's focus on delivering results quickly. I'm confident that my skills in distributed systems development, AI/ML implementation, flight control systems, leadership, and team collaboration would allow me to make a significant contribution to your team's efforts.
+            </p>
+
+            <p class="mb-4">
+                I am confident that my combination of technical expertise, leadership experience, and passion for innovative technology makes me an ideal candidate for this position. I am excited about the possibility of contributing to Anduril's mission and would welcome the opportunity to discuss how my skills and enthusiasm could benefit your team.
+            </p>
+
+            <div class="closing mt-5">
+                <p>Best regards,</p>
+                <p>Conley Price</p>
+            </div>
+        </div>
+    </section>
+</div>
+
+@code {
+    private bool _hideReturnLink = false;
+
+    private async Task ExportToPdf()
+    {
+        _hideReturnLink = true;
+        await JSRuntime.InvokeVoidAsync("prepareForExport");
+        await JSRuntime.InvokeVoidAsync("exportToPdf");
+        await JSRuntime.InvokeVoidAsync("resetAfterExport");
+        _hideReturnLink = false;
+    }
+
+    private async Task DownloadScreenshot()
+    {
+        _hideReturnLink = true;
+        await JSRuntime.InvokeVoidAsync("prepareForExport");
+        await JSRuntime.InvokeVoidAsync("downloadScreenshot");
+        await JSRuntime.InvokeVoidAsync("resetAfterExport");
+        _hideReturnLink = false;
+    }
+} 

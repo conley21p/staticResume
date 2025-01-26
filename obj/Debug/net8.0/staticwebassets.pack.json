@@ -1,104 +1,64 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
-      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+      "Id": "/Users/conleyprice/Documents/staticResume/bin/Debug/net8.0/wwwroot/_framework/blazor.webassembly.js",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js"
     },
     {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\obj\\Debug\\net8.0\\compressed\\xnea3odv8i.gz",
-      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+      "Id": "/Users/conleyprice/Documents/staticResume/obj/Debug/net8.0/compressed/gjrr8tism4.gz",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js.gz"
     },
     {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\obj\\Debug\\net8.0\\scopedcss\\bundle\\staticResume.styles.css",
-      "PackagePath": "staticwebassets\\staticResume.styles.css"
+      "Id": "/Users/conleyprice/Documents/staticResume/obj/Debug/net8.0/scopedcss/bundle/AndurilResume.styles.css",
+      "PackagePath": "staticwebassets/AndurilResume.styles.css"
     },
     {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\css\\app.css",
-      "PackagePath": "staticwebassets\\css\\app.css"
+      "Id": "/Users/conleyprice/Documents/staticResume/wwwroot/css/app.css",
+      "PackagePath": "staticwebassets/css/app.css"
     },
     {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+      "Id": "/Users/conleyprice/Documents/staticResume/wwwroot/css/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+      "Id": "/Users/conleyprice/Documents/staticResume/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\css\\dropdown.css",
-      "PackagePath": "staticwebassets\\css\\dropdown.css"
+      "Id": "/Users/conleyprice/Documents/staticResume/wwwroot/css/resume.css",
+      "PackagePath": "staticwebassets/css/resume.css"
     },
     {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\css\\modal.css",
-      "PackagePath": "staticwebassets\\css\\modal.css"
+      "Id": "/Users/conleyprice/Documents/staticResume/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
     },
     {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "/Users/conleyprice/Documents/staticResume/wwwroot/icon-192.png",
+      "PackagePath": "staticwebassets/icon-192.png"
     },
     {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\favicon.png",
-      "PackagePath": "staticwebassets\\favicon.png"
+      "Id": "/Users/conleyprice/Documents/staticResume/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
     },
     {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\icon-192.png",
-      "PackagePath": "staticwebassets\\icon-192.png"
+      "Id": "/Users/conleyprice/Documents/staticResume/wwwroot/sample-data/weather.json",
+      "PackagePath": "staticwebassets/sample-data/weather.json"
     },
     {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\images\\background-fight-BW.jpg",
-      "PackagePath": "staticwebassets\\images\\background-fight-BW.jpg"
-    },
-    {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\images\\background-fight.jpg",
-      "PackagePath": "staticwebassets\\images\\background-fight.jpg"
-    },
-    {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\images\\background-stand-alone-BW.jpg",
-      "PackagePath": "staticwebassets\\images\\background-stand-alone-BW.jpg"
-    },
-    {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\images\\background-stand-alone.jpg",
-      "PackagePath": "staticwebassets\\images\\background-stand-alone.jpg"
-    },
-    {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\index.html",
-      "PackagePath": "staticwebassets\\index.html"
-    },
-    {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\sample-data\\weather.json",
-      "PackagePath": "staticwebassets\\sample-data\\weather.json"
-    },
-    {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\svg\\Github.svg",
-      "PackagePath": "staticwebassets\\svg\\Github.svg"
-    },
-    {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\svg\\LinkedIn.svg",
-      "PackagePath": "staticwebassets\\svg\\LinkedIn.svg"
-    },
-    {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\svg\\crown-black.svg",
-      "PackagePath": "staticwebassets\\svg\\crown-black.svg"
-    },
-    {
-      "Id": "C:\\Users\\conle\\Documents\\Software\\staticResume\\wwwroot\\svg\\crown-white.svg",
-      "PackagePath": "staticwebassets\\svg\\crown-white.svg"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.staticResume.props",
-      "PackagePath": "build\\staticResume.props"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.staticResume.props",
-      "PackagePath": "buildMultiTargeting\\staticResume.props"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.staticResume.props",
-      "PackagePath": "buildTransitive\\staticResume.props"
-    },
-    {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.staticResume.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.AndurilResume.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.AndurilResume.props",
+      "PackagePath": "build\\AndurilResume.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.AndurilResume.props",
+      "PackagePath": "buildMultiTargeting\\AndurilResume.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.AndurilResume.props",
+      "PackagePath": "buildTransitive\\AndurilResume.props"
     }
   ],
   "ElementsToRemove": []
